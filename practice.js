@@ -164,14 +164,12 @@ var getRandomArbitrary = function() {
 
 function finder(array){
 
-  var randomNum = getRandomArbitrary();
- for(var i = 0; i < array.length; i = 0){
-   if(array.indexOf(randomNum) != -1) {
+ for(var i = 0; i < array.length; i++){
+   if(getRandomArbitrary() === array[i]) {
      return true;
-   }; return false;
- };
-  
- }; finder(numbers)
+   } 
+ } return false;
+ }; 
 
 
 
@@ -341,7 +339,7 @@ var colt = {
 */
 
 
-devMountainEmployees.push(tyler, cahlan, ryan, colt);
+devMountainEmployees = [tyler, cahlan, ryan, colt];
 console.log(devMountainEmployees.length);
 
 
@@ -353,10 +351,11 @@ console.log(devMountainEmployees.length);
 
 function removeCahlan(arr){
   for(var i = 0; i < arr.length; i++){
-    if(devMountainEmployees[i].name === 'Cahlan'){
+    if(arr[i].name === 'Cahlan'){
       arr.splice(i, 1)
-    }
-  }; return devMountainEmployees;
+    } 
+  } 
+  return arr;
 };
 
 removeCahlan(devMountainEmployees);
